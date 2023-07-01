@@ -1,25 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (<div className={'min-h-screen w-full flex xl:flex-row flex-col justify-center items-center'}>
+        <img className={'w-52 animate-pulse'} src="/sibtorsh-logo.svg" alt=""/>
+        <span className={'font-bold text-xl xl:text-5xl text-green-700'}>
+            Welcome to Sibtorsh code challenge
+        </span>
+        <img className={'w-52 animate-pulse'} src="/sibtorsh-logo.svg" alt=""/>
+    </div>);
 }
 
 export default App;
