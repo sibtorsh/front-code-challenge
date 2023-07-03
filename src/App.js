@@ -1,11 +1,19 @@
-function App() {
-    return (<div className={'min-h-screen w-full flex xl:flex-row flex-col justify-center items-center'}>
-        <img className={'w-52 animate-pulse'} src="/sibtorsh-logo.svg" alt=""/>
-        <span className={'font-bold text-xl xl:text-5xl text-green-700'}>
-            Welcome to Sibtorsh code challenge
-        </span>
-        <img className={'w-52 animate-pulse'} src="/sibtorsh-logo.svg" alt=""/>
-    </div>);
-}
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoginForm from "./components/LoginForm";
+import UserTable from "./components/UserTable";
+
+const App = () => {
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route path="dashboard/login" element={<LoginForm />} />
+          <Route path="dashboard/users" element={<UserTable />} />
+        </Routes>
+      </Router>
+    </div>
+  );
+};
 
 export default App;
