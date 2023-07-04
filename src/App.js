@@ -1,11 +1,34 @@
+import Users from "./Pages/dashboard/users";
+import RootPage from "./Pages/rootPage";
+import {
+    createBrowserRouter,
+    RouterProvider,
+  } from "react-router-dom";
+
+
 function App() {
-    return (<div className={'min-h-screen w-full flex xl:flex-row flex-col justify-center items-center'}>
-        <img className={'w-52 animate-pulse'} src="/sibtorsh-logo.svg" alt=""/>
-        <span className={'font-bold text-xl xl:text-5xl text-green-700'}>
-            Welcome to Sibtorsh code challenge
-        </span>
-        <img className={'w-52 animate-pulse'} src="/sibtorsh-logo.svg" alt=""/>
-    </div>);
+
+    const router = createBrowserRouter([
+        {
+            path : '/',
+            element : <RootPage/>
+        },
+        {
+            path : '/dashboard',
+            children : [
+                {
+                    path : '/dashboard/users',
+                    element : <Users/> 
+                }
+            ]
+        }
+    ])
+
+    return (
+        <div className={'min-h-screen p-4 w-full h-full flex justify-center items-center'}>
+            <RouterProvider router={router} />
+        </div>
+    );
 }
 
 export default App;

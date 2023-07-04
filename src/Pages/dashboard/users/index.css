@@ -1,0 +1,18 @@
+button {
+    background: rgb(171,78,105);
+    background: linear-gradient(55deg, rgba(171,78,105,1) 27%, rgba(4,156,157,1) 100%);
+}
+
+.selected-button {
+    background: rgb(171,78,105);
+    background: linear-gradient(55deg, rgba(171,78,105,1) 0%, rgba(255,255,255,1) 50%, rgba(4,156,157,1) 100%);
+    outline: solid 2px #049c9d;
+    outline-offset: 2px;
+    color: #9d3553;
+}
+
+button:hover{
+    background: rgb(171,78,105);
+    background: linear-gradient(55deg, rgba(171,78,105,1) 0%, rgba(255,255,255,1) 50%, rgba(4,156,157,1) 100%);
+    color: #9d3553;
+}
