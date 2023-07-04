@@ -16,7 +16,7 @@ const Users = () => {
             buttons.push(
                 <button
                     key={i}
-                    className="w-10 h-10 text-white text-lg font-bold border p-2 rounded-md border-l-[#AB4E69] border-t-[#AB4E69] border-b-[#049C9D] border-r-[#049C9D] flex justify-center items-center"
+                    className={`w-10 h-10 text-white text-lg font-bold border p-2 rounded-md border-l-[#AB4E69] border-t-[#AB4E69] border-b-[#049C9D] border-r-[#049C9D] flex justify-center items-center ${pageNumber === i+1 ? 'selected-button' : ''}`}
                     onClick={() => setPageNumber(i + 1)}
                 >
                     {i + 1}
